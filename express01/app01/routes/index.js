@@ -10,8 +10,7 @@ router.get('/', function(req, res) {
 router.get('/photos', function (req, res) {
     res.render('photos/index', {title: 'Express Photo',photos:[{name:"Node.js Logo"},{name:"Ryan Speaking"}]});
 });
-
-//router.get('/upload', photos.form);
-//router.post('/upload', photos.submit('/public/uploads'));
+router.get('/photos/upload', photos.form);
+router.post('/photos/upload', photos.submit('/public/uploads'));
 
 module.exports = router;

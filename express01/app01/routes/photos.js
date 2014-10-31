@@ -4,10 +4,11 @@ var fs = require('fs');
 var join = path.join;
 
 exports.form = function (req, res) {
-    res.render('upload', {title: 'Photo upload'});
+    res.render('photos/upload', {title: 'Photo upload'});
 };
 exports.submit = function (dir) {
     return function (req, res, next) {
+        console.info(req.files);
         var img = req.files.photo.image;
         var name = req.body.photo.name || img.name;
         var path = join(dir, img.name);
