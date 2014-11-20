@@ -21,37 +21,57 @@
             'images/3.jpg'
         ];
 
-        var loadedImages,images = [];
+        function loadImage(url, callback) {
+            var img = new Image(); //创建一个Image对象，实现图片的预下载
+            img.src = url;
 
-        function loadImage() {
-            var total = imageLocations.length;
-            var imageCounter = 0;
-            var onLoad = function (err, msg) {
-                if (err) {
-                    console.log(msg);
-                }
-                imageCounter++;
-                if (imageCounter == total) {
-                    loadedImages = true;
+            if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+                callback.call(img);
+                return; // 直接返回，不用再处理onload事件
+            }
+
+            img.onload = function () { //图片下载完毕时异步调用callback函数。
+                callback.call(img);//将回调函数的this替换为Image对象
+            };
+        };
+
+        for (var i = 0; i < imageLocations.length; i++) {
+            loadImage(imageLocations[i], function () {
+                console.info("success");
+            });
+        }
+
+//        var loadedImages,images = [];
+//
+//        function loadImage() {
+//            var total = imageLocations.length;
+//            var imageCounter = 0;
+//            var onLoad = function (err, msg) {
+//                if (err) {
+//                    console.log(msg);
+//                }
+//                imageCounter++;
+//                if (imageCounter == total) {
+//                    loadedImages = true;
 
 //                    var temp = $("<img src='#'></img>");
 //                    temp[0].src = images[1];
 //                    $("#images").append(temp);
-                }
-            }
-            for (var i = 0; i < imageLocations.length; i++) {
-                var img = new Image();
-                img.onload = function () {
-                    onLoad(false);
-                };
-                img.onerror = function () {
-                    onLoad(true, "it's error.");
-                };
-                img.src = imageLocations[i];
-                images[i] = img;
-            }
-        }
-        loadImage();
+//                }
+//            }
+//            for (var i = 0; i < imageLocations.length; i++) {
+//                var img = new Image();
+//                img.onload = function () {
+//                    onLoad(false);
+//                };
+//                img.onerror = function () {
+//                    onLoad(true, "it's error.");
+//                };
+//                img.src = imageLocations[i];
+//                images[i] = img;
+//            }
+//        }
+//        loadImage();
 //        function paintImage(index) {
 //            if (!loadedImages) {
 //                return;
