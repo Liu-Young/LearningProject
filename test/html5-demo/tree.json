@@ -1,0 +1,47 @@
+{
+    "title": "#",
+    "value": "1",
+    "leafQuantity": 3,
+    "children": [
+      {
+        "title": "First Name",
+        "value": "Mark",
+        "leafQuantity": 2,
+        "children": [
+          {
+            "title": "Last Name",
+            "value": "Otto",
+            "leafQuantity": 1,
+            "children": [
+              {
+                "title": "User Name",
+                "value": "@Otto",
+                "leafQuantity": 1,
+                "children": []
+              }
+            ]
+          },
+          {
+            "title": "Last Name",
+            "value": "Ka",
+            "leafQuantity": 1,
+            "children": [
+              {
+                "title": "User Name",
+                "value": "@Ka",
+                "leafQuantity": 1,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "First Name",
+        "value": "Kob",
+        "children": [
+
+        ]
+      }
+    ]
+}

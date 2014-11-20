@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>js页面图片延迟加载 - 97站长网 - www.97zzw.com</title>
+    <script type="text/javascript" src="js/CJL.0.1.min.js"></script>
+    <script type="text/javascript" src="js/LazyLoad.js"></script>
+    <style>
+        .floorMain {
+            width: 780px;
+            height: 300px;
+            margin: 100px auto 100px;
+        }
+
+        .floorMain a {
+            background: url(images/loading.gif) center center no-repeat;
+            float: left
+        }
+
+        .floorMain img {
+            border: 0;
+            filter: alpha(opacity:0);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="mainContent">
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+    <div class="floorMain">
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="台机总动员"
+                                           _lazysrc="images/T1rquFXfBwXXXXXXXX-195-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="卖家办公团采 发票联保"
+                                           _lazysrc="images/T1ll5AXj8iXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="家电每日惠"
+                                           _lazysrc="images/T1n7mFXkxcXXXXXXXX-390-150.png"/> </a>
+        <a href="javascript:void(0)"> <img width="390" height="150" alt="数码圣诞狂欢"
+                                           _lazysrc="images/T19gmHXbxfXXXXXXXX-390-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="家电圣诞活动"
+                                           _lazysrc="images/T1n59HXgNbXXXXXXXX-195-150.jpg"/> </a>
+        <a href="javascript:void(0)"> <img width="195" height="150" alt="硬盘播放器"
+                                           _lazysrc="images/T17HWFXalrXXXXXXXX-195-150.png"/> </a>
+    </div>
+</div>
+</body>
+</html>
+
+<script language="javascript">
+    function isIE() { //ie?
+        if (window.navigator.userAgent.toLowerCase().indexOf("msie") >= 1) return true;
+        else return false;
+    }
+    var _ie = isIE();
+    (function () {
+        var row = $$("mainContent"), total = row.getElementsByTagName("img").length, cells = [];
+        for (var i = 0, n = total; i < n; i++) {
+            var img = row.getElementsByTagName("img")[i];
+            if (img) {
+                //图片地址添加随机数避免缓存，可删除
+                img.setAttribute("_lazysrc", img.getAttribute("_lazysrc") + "?" + Math.random());
+                cells.push(img);
+            }
+        }
+        var lazy = new ImagesLazyLoad({
+            container: window, mode: "vertical",
+            holder: "images/s.gif",
+            onLoad: function (img) {
+                img.onload = function () {
+                    showPic(this);
+                }
+            }
+        });
+
+        function showPic(img) {
+            var t = setInterval(function () {
+                var opacity = _ie ? img.filters.alpha.opacity : img.style.opacity * 100
+                if (opacity < 100) {
+                    (_ie ? img.filters.alpha.opacity += 10 : img.style.opacity = (opacity + 10) / 100);
+                } else {
+                    clearInterval(t);
+                }
+            }, 15);
+        }
+    })();
+</script>

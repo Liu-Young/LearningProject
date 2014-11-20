@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Html Web Canvas 图片浏览器</title>
+    <link rel="stylesheet" href="css/web-canvas-pic-broswer.css">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="images"></div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script language="javascript">
+    $(function () {
+        const PAINT_INTERVGAL = 20;
+        const PAINT_SLOW_INTERRVAL = 20000;
+        const IDLE_TIME_OUT = 3000;
+
+        var imageLocations = [
+            'images/1.jpg',
+            'images/2.jpg',
+            'images/3.jpg'
+        ];
+
+        var loadedImages,images = [];
+
+        function loadImage() {
+            var total = imageLocations.length;
+            var imageCounter = 0;
+            var onLoad = function (err, msg) {
+                if (err) {
+                    console.log(msg);
+                }
+                imageCounter++;
+                if (imageCounter == total) {
+                    loadedImages = true;
+
+//                    var temp = $("<img src='#'></img>");
+//                    temp[0].src = images[1];
+//                    $("#images").append(temp);
+                }
+            }
+            for (var i = 0; i < imageLocations.length; i++) {
+                var img = new Image();
+                img.onload = function () {
+                    onLoad(false);
+                };
+                img.onerror = function () {
+                    onLoad(true, "it's error.");
+                };
+                img.src = imageLocations[i];
+                images[i] = img;
+            }
+        }
+        loadImage();
+//        function paintImage(index) {
+//            if (!loadedImages) {
+//                return;
+//            }
+//            var image = images[index];
+//            var screen_h = canvas.heigth;
+//            var screen_w = canvas.width;
+//            var ratio = getScaleRatio({width: image.width, height: image.height}, {width: screen_w, height: screen_h});
+//            var img_h = image.height * ratio;
+//            var img_w = image.width * ratio;
+//            context.drawImage(image, (screen_w - img_w) / 2, (screen_h - img_h) / 2, img_w, img_h);
+//        }
+    });
+</script>
+</body>
+</html>
