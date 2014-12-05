@@ -1,0 +1,9 @@
+.ul{
+    background: #46bcff;
+}
+.li{
+    color: #ff09da;
+}
+.li:nth-child(3){
+    color: #444eff;
+}
