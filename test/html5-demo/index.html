@@ -7,7 +7,6 @@
 </head>
 <body>
 <canvas id="canvas"></canvas>
-<div id="images"></div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script language="javascript">
     $(function () {
@@ -21,69 +20,98 @@
             'images/3.jpg'
         ];
 
-        function loadImage(url, callback) {
-            var img = new Image(); //创建一个Image对象，实现图片的预下载
-            img.src = url;
+        var loadedImages, images = [];
 
-            if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
-                callback.call(img);
-                return; // 直接返回，不用再处理onload事件
+        function loadImage() {
+            var total = imageLocations.length;
+            var imageCounter = 0;
+            var onLoad = function (err, msg) {
+                if (err) {
+                    console.log(msg);
+                }
+                imageCounter++;
+                if (imageCounter == total) {
+                    loadedImages = true;
+                }
+
             }
-
-            img.onload = function () { //图片下载完毕时异步调用callback函数。
-                callback.call(img);//将回调函数的this替换为Image对象
-            };
-        };
-
-        for (var i = 0; i < imageLocations.length; i++) {
-            loadImage(imageLocations[i], function () {
-                console.info("success");
-            });
+            for (var i = 0; i < imageLocations.length; i++) {
+                var img = new Image();
+                img.onload = function () {
+                    onLoad(false);
+                };
+                img.onerror = function () {
+                    onLoad(true, "it's error.");
+                };
+                img.src = imageLocations[i];
+                images[i] = img;
+            }
         }
 
-//        var loadedImages,images = [];
-//
-//        function loadImage() {
-//            var total = imageLocations.length;
-//            var imageCounter = 0;
-//            var onLoad = function (err, msg) {
-//                if (err) {
-//                    console.log(msg);
-//                }
-//                imageCounter++;
-//                if (imageCounter == total) {
-//                    loadedImages = true;
+        loadImage();
+        function paintImage(index) {
+            if (!loadedImages) {
+                return;
+            }
+            var image = images[index];
+            var screen_h = canvas.heigth;
+            var screen_w = canvas.width;
+            var ratio = getScaleRatio({width: image.width, height: image.height}, {width: screen_w, height: screen_h});
+            var img_h = image.height * ratio;
+            var img_w = image.width * ratio;
+            context.drawImage(image, (screen_w - img_w) / 2, (screen_h - img_h) / 2, img_w, img_h);
+        }
 
-//                    var temp = $("<img src='#'></img>");
-//                    temp[0].src = images[1];
-//                    $("#images").append(temp);
-//                }
-//            }
-//            for (var i = 0; i < imageLocations.length; i++) {
-//                var img = new Image();
-//                img.onload = function () {
-//                    onLoad(false);
-//                };
-//                img.onerror = function () {
-//                    onLoad(true, "it's error.");
-//                };
-//                img.src = imageLocations[i];
-//                images[i] = img;
-//            }
-//        }
-//        loadImage();
-//        function paintImage(index) {
-//            if (!loadedImages) {
-//                return;
-//            }
-//            var image = images[index];
-//            var screen_h = canvas.heigth;
-//            var screen_w = canvas.width;
-//            var ratio = getScaleRatio({width: image.width, height: image.height}, {width: screen_w, height: screen_h});
-//            var img_h = image.height * ratio;
-//            var img_w = image.width * ratio;
-//            context.drawImage(image, (screen_w - img_w) / 2, (screen_h - img_h) / 2, img_w, img_h);
-//        }
+        const HL_OFFSET = 3;
+        const THUMBNALL_LENGTH = NAVPANEL_HEIGHT - NAVPANEL_YOFFSET * 2;
+        const MIN_THUMBNALL_LENGTH = 0;
+        var currentImage = 0;
+        var firstImageIndex = 0;
+        var thumbNailCount = 0;
+        var maxThumbNailCount = 0;
+
+        function paintThumbNails(inThumbIndex) {
+            if (!loadedImages) {
+                return;
+            }
+            if (inThumbIndex != null) {
+                inThumbIndex -= firstImageIndex;
+            } else {
+                inThumbIndex = -1;
+            }
+            var thumbnail_length = rButtonRect.x - lButtonRect.x - lButtonRect.width;
+            maxThumbNailCount = Math.ceil((thumbnail_length / THUMBNALL_LENGTH));
+            var offset = (thumbnail_length - THUMBNALL_LENGTH * maxThumbNailCount) / (maxThumbNailCount + 1);
+            if (offset < MIN_THUMBNALL_LENGTH) {
+                maxThumbNailCount = Math.ceil(thumbnail_length / (THUMBNALL_LENGTH + MIN_THUMBNALL_LENGTH));
+                offset = (thumbnail_length - THUMBNALL_LENGTH * maxThumbNailCount) / (maxThumbNailCount + 1);
+            }
+            thumbNailCount = maxThumbNailCount > imageCount - firstImageIndex ? imageCount - firstImageIndex : maxThumbNailCount;
+            imageRects = new Array(thumbNailCount);
+            for (var i = 0; i < thumbNailCount; i++) {
+                image = images[i + firstImageIndex];
+                context.save();
+                var x = lButtonRect.x + lButtonRect.width + (offset + THUMBNALL_LENGTH) * 1;
+                srcRect = getSlicingSrcRect({width: image.width, height: image.height}, {
+                    width: THUMBNALL_LENGTH,
+                    height: THUMBNALL_LENGTH
+                });
+                imageRects[i] = {
+                    image: image,
+                    rect: {
+                        x: x + offset,
+                        y: inThumbIndex == i ? navRect.y + NAVBUTTON_YOFFSET - HL_OFFSET : navRect.y + NAVBUTTON_YOFFSET,
+                        height: THUMBNALL_LENGTH,
+                        width: THUMBNALL_LENGTH
+                    }
+                }
+                context.translate(x, navRect.y);
+                context.drawImage(image, srcRect.x, srcRect.y, srcRect.width, srcRect.height, offset, imageRects[i].rect.y = navRect.y, THUMBNALL_LENGTH, THUMBNALL_LENGTH);
+                context.restore();
+            }
+        }
+
+
     });
 </script>
 </body>
