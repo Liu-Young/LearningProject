@@ -63,10 +63,7 @@ public class MainFrame extends JFrame {
         removePrefix.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int result = JOptionPane.showConfirmDialog(null, "确定要去队前缀?", "去除DSC_XXXX_操作", JOptionPane.OK_CANCEL_OPTION);
-                if (result == JOptionPane.YES_OPTION) {
-                    rename(new File(path.getText()));
-                }
+
             }
         });
 
@@ -87,16 +84,7 @@ public class MainFrame extends JFrame {
         this.add(p3, BorderLayout.SOUTH);
     }
 
-    private void rename(File file) {
-        File[] files = file.listFiles();
-        for (File f : files) {
-            if (f.isDirectory()) {
-                rename(f);
-            } else {
-                f.renameTo(new File(f.getParent() + "\\" + f.getName().substring(9)));
-            }
-        }
-    }
+
 
     private void hideMyself() {
         this.setVisible(false);

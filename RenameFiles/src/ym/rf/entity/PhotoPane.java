@@ -23,8 +23,8 @@ public class PhotoPane extends JPanel{
     }
 
     public void setImage(File file) {
-        int resizeWidth = 800;
-        int resizeHeight = 533;
+        int resizeWidth = 390;    // 260 * 1.5
+        int resizeHeight = 480;   // 320 * 1.5
 
         Resize resize = new Resize(file.getAbsolutePath(), resizeWidth, resizeHeight);
         image = Resize.rize(resize.bufImage, resizeWidth, resizeHeight);
@@ -40,7 +40,7 @@ public class PhotoPane extends JPanel{
         g.setColor(Color.white);
         g.fillRect(0,0,WIDTH,HEIGHT);
         if (image != null) {
-            g.drawImage(image, (WIDTH-image.getWidth())/2, (HEIGHT-image.getHeight())/2, null);
+            g.drawImage(image, (WIDTH-image.getWidth())/2, (HEIGHT-image.getHeight()-100)/2, null);
         }
     }
 }
