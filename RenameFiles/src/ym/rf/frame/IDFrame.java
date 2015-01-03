@@ -228,7 +228,7 @@ class SelectDirAction implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         idFrame.chooser.showOpenDialog(null);
         File files = idFrame.chooser.getSelectedFile();
-        if (files.isDirectory()) {
+        if (files != null && files.isDirectory()) {
             idFrame.resetPointer();
             idFrame.filePath.setText(files.getAbsolutePath());
             idFrame.images = files.listFiles();
