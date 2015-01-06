@@ -1,0 +1,16 @@
+$color: #333;
+$bgColor: #888;
+$boxWidth: 300px;
+$boxHeight: 300px;
+
+.box {
+  width: $boxWidth;
+  height: $boxHeight;
+  color: $color;
+  background-color: $bgColor;
+
+  &:hover {
+    width: $boxWidth / 2;
+    height: $boxHeight / 2;
+  }
+}
