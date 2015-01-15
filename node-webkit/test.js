@@ -1,3 +1,2 @@
-/**
- * Created by Young on 2015/1/6.
- */
+var p = require('./program.js');
+p.a();

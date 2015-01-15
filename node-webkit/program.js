@@ -1,3 +1,4 @@
-/**
- * Created by Young on 2015/1/6.
- */
+function a(){
+    console.log(__filename);
+}
+module.exports = a;
