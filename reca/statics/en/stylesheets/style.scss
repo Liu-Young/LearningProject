@@ -1,4 +1,50 @@
-div{
-  padding: 0;
-  margin: 0;
+@import "variables";
+@import "normalize";
+@import "mixins/_vendor-prefixes";
+@import "mixins/_tab-focus";
+@import "mixins/_image";
+@import "mixins/_clearfix";
+@import "mixins/_grid-framework";
+@import "mixins/_grid";
+
+@import "grid";
+@import "scaffolding";
+
+$color1: #1F1209;
+$color2: #003366;
+$color3: #FFF8DC;
+$color4: #834C24;
+
+#top{
+  background: #333;
+  height: 35px;
+}
+.language{
+  ul{
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    li{
+      float: left;
+      a{
+        display: block;
+        height: 35px;
+        width: 36px;
+        text-align: center;
+        text-decoration: none;
+        font: normal 11px/35px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Arial, Verdana, sans-serif;
+        color: #999;
+      }
+      &:hover a{
+        background: #222;
+      }
+      &.current a{
+        background: #393939;
+        color: #ddd;
+      }
+    }
+  }
+}
+.logo {
+  float: left;
 }
