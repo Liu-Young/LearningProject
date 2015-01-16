@@ -1,150 +1,58 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form id="form1" runat="server">
-    <div class="war">
-        <div class="logo">
-            <div class="nav_en">
-                <a href="/en/index.aspx">Home</a> | <a href="/en/info.aspx">Ordering Assistance</a> | <a
-                    href="/en/trade.aspx">Trade</a> | <a href="/en/logistics.aspx">Logistics and Custom Clearance</a>
-                | <a href="/en/bonded.aspx">Bonded Warehousing</a> | <a href="/en/aboutus.aspx">Contact Us</a></div>
-            <div class="lan">
-                <table width="57" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <a href="/index.aspx"> <img src="/cn/images/lan/ru.gif" width="16" height="11"
-                                                        style="cursor:pointer;"/></a></td>
-                        <td align="center" valign="middle">
-                            <a href="/en/index.aspx"> <img src="/cn/images/lan/en.gif" width="16" height="11"
-                                                           style="cursor:pointer;"/></a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div style="margin-top:20px;">
-            <!--<%= new bal.BalArticle().GetCacheContent(3392) %> -->
-            <html>
-            <head>
-                <title></title>
-            </head>
-            <body>
-            <p style="text-align: center; ">
-                &nbsp;</p>
-
-            <h3 style="color: blue; text-align: center; ">
-                <span style="color:#07338c;"><span style="font-size: 16px; "><span
-                        style="font-family: arial, helvetica, sans-serif; line-height: 25px; ">We guarantee &ndash; You can buy what you wanted and receive what you ordered.</span></span></span>
-            </h3>
-            </body>
-            </html>
-
-        </div>
-        <div class="info">
-            <table width="880" border="0" align="center" cellpadding="0" cellspacing="0">
-
-                <tr>
-                    <td class="padding5px">
-                        <!--<%= new bal.BalArticle().GetCacheContent(3381) %> -->
-                        "
-                        <html>
-                        <head>
-                            <title></title>
-                            <style type="text/css">
-                                <!--
-                                .vf {
-                                    font-family: Arial, Helvetica, sans-serif;
-                                    font-size: 18px;
-                                    font-style: normal;
-                                    line-height: 15px;
-                                }
-
-                                -->        </style>
-                        </head>
-                        <body>
-                        <table align="center" border="0" cellpadding="1" cellspacing="1"
-                               style="width: 850px; border-bottom-color: rgb(255, 102, 0); border-bottom-width: 1px; border-bottom-style: dotted; ">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <span style="color:#07338c;"><span style="font-size: 22px; "><span
-                                            style="font-family: arial, helvetica, sans-serif; ">Reca-International Company</span></span></span>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="vf">
-                            <table align="center" border="0" cellpadding="1" cellspacing="1" style="width: 850px; ">
-                                <tbody>
-                                <tr>
-                                    <td style="text-align: justify; ">
-                                        <span style="font-family:arial,helvetica,sans-serif;"><span
-                                                style="font-size: 16px; "><span style="line-height: 25px; ">Reca International Company Limited (hereinafter referred to as Reca) is a multi-functioned company, which is located in Guangzhou and began its business in 2001. Reca is an international trade &amp; logistics company whose business and services cover ordering assistance, trade, customs clearance, bonded warehousing and logistics. During the past 10 years, Reca has served numerous customers from different countries. Reca&#39;s years of efforts and practices have brought Reca rich experiences, making it a professional foreign-trade company with a complete operating system.</span></span></span>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <table align="center" border="0" style="width: 850px; " width="795">
-                            <tbody>
-                            <tr>
-                                <td width="271">
-                                    <span style="font-size: 18px"><span
-                                            style="font-family: arial, helvetica, sans-serif"><img alt=""" src="http://reca-international.com/upload/120920025255.jpg" style="margin-left: 0px; margin-right: 0px; width: 303px; height: 202px; " /></span></span>
-                                </td>
-                                <td style="text-align: justify" width="505">
-                                    <span style="font-size: 18px"><span
-                                            style="font-family: arial, helvetica, sans-serif"><img alt=""" src="http://reca-international.com/upload/120920025306.jpg" style="margin-left: 0px; margin-right: 0px; width: 530px; height: 202px; " /></span></span>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <p align="justify">
-                            &nbsp;</p>
-
-                        <p>
-                            &nbsp;</p>
-                        </body>
-                        </html>
-                        "
-
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!--</asp:Content>-->
+<div class="container">
+    <ul>
+        <a href="/en/index.aspx">Home</a>
+        <a href="/en/info.aspx">Ordering Assistance</a>
+        <a href="/en/trade.aspx">Trade</a>
+        <a href="/en/logistics.aspx">Logistics and Custom Clearance</a>
+        <a href="/en/bonded.aspx">Bonded Warehousing</a>
+        <a href="/en/aboutus.aspx">Contact Us</a>
+    </ul>
+    <div>
+        <a href="#">English</a>
+        <a href="#">Russia</a>
     </div>
-    <div class="floder">
-
-        <div class="center_footer">
-            <!--<%= new bal.BalArticle().GetCacheContent(3386)%>-->
-            <table algin="center" border="0" cellpadding="1" cellspacing="1" style="width: 600px">
-                <tbody>
-                <tr>
-                    <td style="text-align: center">
-                        <img height="53"
-                             src="http://reca-international.com/upload/aticle_imge/uploadimage/globareca/Admin20120917072643/20120917072751.png"
-                             style="line-height: 14px; background-color: rgb(222,236,247); font-family: 宋体; font-size: 12px"
-                             width="98"/></td>
-                    <td style="text-align: left">
-                        <p>
-                            &nbsp;</p>
-
-                        <p>
-                            <span style="color: #07338c"><span style="font-size: 18px"><span
-                                    style="font-family: tahoma, geneva, sans-serif">RECA INTERNATIONAL COMPANY LIMITED</span></span></span>
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="jumbotron">
+        <h2>We guarantee – You can buy what you wanted and receive what you ordered.</h2>
+        <!--<p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more »</a></p>-->
     </div>
-</form>
+    <div class="article">
+        <h3>Reca-International Company</h3>
+
+        <p>Reca International Company Limited (hereinafter referred to as Reca) is a multi-functioned company, which is
+            located in Guangzhou and began its business in 2001. Reca is an international trade & logistics company whose
+            business and services cover ordering assistance, trade, customs clearance, bonded warehousing and logistics.
+            During the past 10 years, Reca has served numerous customers from different countries. Reca's years of efforts
+            and practices have brought Reca rich experiences, making it a professional foreign-trade company with a complete
+            operating system.</p>
+    </div>
+    <img src="http://reca-international.com/upload/120920025255.jpg"/>
+    <img src="http://reca-international.com/upload/120920025306.jpg"/>
+
+    <div id="footer">
+        <img src="http://reca-international.com/upload/aticle_imge/uploadimage/globareca/Admin20120917072643/20120917072751.png"/>
+        <span>RECA INTERNATIONAL COMPANY LIMITED</span>
+    </div>
+</div>
 </body>
 </html>
 

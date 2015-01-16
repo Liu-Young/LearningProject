@@ -1,149 +1,44 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form id="form1" runat="server">
-    <div class="war">
-        <div class="logo">
-            <div class="nav_en">
-                <a href="/en/index.aspx">Home</a> | <a href="/en/info.aspx">Ordering Assistance</a> | <a
-                    href="/en/trade.aspx">Trade</a> | <a href="/en/logistics.aspx">Logistics and Custom Clearance</a>
-                | <a href="/en/bonded.aspx">Bonded Warehousing</a> | <a href="/en/aboutus.aspx">Contact Us</a></div>
-            <div class="lan">
-                <table width="57" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <a href="/index.aspx"> <img src="/cn/images/lan/ru.gif" width="16" height="11"
-                                                        style="cursor:pointer;"/></a></td>
-                        <td align="center" valign="middle">
-                            <a href="/en/index.aspx"> <img src="/cn/images/lan/en.gif" width="16" height="11"
-                                                           style="cursor:pointer;"/></a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div id="container">
-            <div class="flexslider">
-                <ul class="slides" id="banner_top_lh" style="display: none;">
-                    <!--<%= (this.Master as master_reca_en).bannerPicList[3]%>-->
-                    <!--<%= (this.Master as master_reca_en).bannerPicList[4]%>-->
-                    <!--<%= (this.Master as master_reca_en).bannerPicList[0]%>-->
-                    <!--<%= (this.Master as master_reca_en).bannerPicList[1]%>-->
-                    <!--<%= (this.Master as master_reca_en).bannerPicList[2]%>-->
-                </ul>
-
-                <script type="text/javascript">
-                    document.getElementById("banner_top_lh").style.display = "";
-                    $('.flexslider').flexslider();
-
-                </script>
-
-            </div>
-        </div>
-        <div class="detail">
-            <table width="890" border="0" cellspacing="0" cellpadding="0">
-
-                <tr>
-                    <td class="padding5px lineheght20px">
-                        <!--<%= new bal.BalArticle().GetCacheContent(3371) %>-->
-                        <html>
-                        <head>
-                            <title></title>
-                        </head>
-                        <body>
-                        <table border="" 0
-                        "" cellpadding=""1"" cellspacing=""1"" style=""width: 950px; border-bottom-color: rgb(255, 102,
-                        0); border-bottom-width: 1px; border-bottom-style: dotted; "">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <span style="" color:#07338c;""><span style="" font-size: 22px; ""><span style=""
-                                                                                                         font-family:
-                                                                                                         arial,
-                                                                                                         helvetica,
-                                                                                                         sans-serif;
-                                "">Bonded Warehousing</span></span></span></td>
-                        </tr>
-                        </tbody>
-            </table>
-            <table border="" 0
-            "" cellpadding=""0"" cellspacing=""0"" width=""900"">
-            <tbody>
-            <tr>
-                <td colspan="" 3
-                "" height=""250"" valign=""top"">
-                <table align="" center
-                "" border=""0"" cellpadding=""0"" cellspacing=""0"" style=""width: 545px; "">
-                <tbody>
-            <tr>
-                <td>
-                    <div style="" text-align: justify; font-family: Tahoma, Geneva, sans-serif
-                    "">
-                    <p>
-                        <span style="" font-size:16px;"">Reca develop bonded warehousing since 2008. They own a
-                        5000m<sup>2</sup> warehouse. They are one of the largest enterprises in bonded warehousing. Reca
-                        have advanced WMS management system, and have a professional team, which always commit to the
-                        development of logistics and trade. The more than 500 staffs team, providing customers services
-                        with bonded warehousing, international freight forwarders, inspection consultation, products
-                        information consultation, wholesale and retail trade, goods imported and exported, technology
-                        imported and exported, simple processing and other services.</span></p>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </td>
-        <td colspan="" 2
-        "" valign=""top"">
-        <img alt="""" src=""http://reca-international.com/upload/120912120526.jpg"" style=""margin: 5px 0px; width:
-        370px; height: 250px"" /></td>
-        </tr>
-        <tr>
-            <td class="" baoshui
-            "" style=""width: 184px; white-space: nowrap; height: 124px; vertical-align: top"">
-            <img alt="""" src=""http://reca-international.com/upload/120911112741.jpg"" style=""margin: 0px 2px; width:
-            180px; height: 120px"" /></td>
-            <td class="" baoshui
-            "" valign=""top"" width=""184"">
-            <img alt="""" src=""http://reca-international.com/upload/120911112803.jpg"" style=""margin: 0px 2px; width:
-            180px; height: 120px"" /></td>
-            <td valign="" top
-            "" width=""184"">
-            <img alt="""" src=""http://reca-international.com/upload/120911112903.jpg"" style=""margin: 0px 2px; width:
-            180px; height: 120px"" /></td>
-            <td valign="" top
-            "" width=""184"">
-            <img alt="""" src=""http://reca-international.com/upload/120911112912.jpg"" style=""margin: 0px 3px; width:
-            180px; height: 120px"" /></td>
-            <td valign="" top
-            "" width=""184"">
-            <img alt="""" src=""http://reca-international.com/upload/120911112928.jpg"" style=""margin: 0px 3px; width:
-            180px; height: 120px"" /><br/>
-            &nbsp;</td>
-        </tr>
-        </tbody>
-        </table>
-        <p>
-            &nbsp;</p>
-</body>
-</html>
-
-</td>
-</tr>
-</table>
-</div>
-<!--</asp:Content>-->
-</div>
-<div class="floder">
-
-    <div class="center_footer">
-        <!--<%= new bal.BalArticle().GetCacheContent(3386)%>-->
+<div class="container">
+    <ul>
+        <a href="/en/index.aspx">Home</a>
+        <a href="/en/info.aspx">Ordering Assistance</a>
+        <a href="/en/trade.aspx">Trade</a>
+        <a href="/en/logistics.aspx">Logistics and Custom Clearance</a>
+        <a href="/en/bonded.aspx">Bonded Warehousing</a>
+        <a href="/en/aboutus.aspx">Contact Us</a>
+    </ul>
+    <div>
+        <a href="#">English</a>
+        <a href="#">Russia</a>
     </div>
+    <h2>Bonded Warehousing</h2>
+
+    <p>Reca develop bonded warehousing since 2008. They own a 5000m2 warehouse. They are one of the largest enterprises
+        in bonded warehousing. Reca have advanced WMS management system, and have a professional team, which always
+        commit to the development of logistics and trade. The more than 500 staffs team, providing customers services
+        with bonded warehousing, international freight forwarders, inspection consultation, products information
+        consultation, wholesale and retail trade, goods imported and exported, technology imported and exported, simple
+        processing and other services.</p>
 </div>
-</form>
 </body>
 </html>
