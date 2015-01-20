@@ -2,4 +2,4 @@
 *.iml
 **/node_modules
 npm-debug.log
-./reca/Reca-Index.psd
+reca/Reca-Index.psd
