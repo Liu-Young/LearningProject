@@ -1,5 +1,5 @@
 var fs = require('fs');
 
 exports.lowerCase = function (path) {
-    console.log('sfdsfs');
+    console.log(path);
 }

@@ -3,18 +3,22 @@
     <title> Menu </title>
 </head>
 <body>
+
 <script>
     // Load native UI library.
-    var gui = require('nw.gui');
+//    var gui = require('nw.gui');
+    var rf = require('./RenameFile.js');
+
+    rf.lowerCase("rename file");
 
     // Open URL with default browser.
 //    gui.Shell.openExternal('https://github.com/rogerwang/node-webkit');
 
     // Open a text file with default text editor.
 //    gui.Shell.openItem('test.txt');
-
     // Open a file in file explorer.
-    gui.Shell.showItemInFolder('D:\\LearningProject\\node-webkit');
+
+//    gui.Shell.showItemInFolder('D:\\LearningProject\\node-webkit');
 </script>
 </body>
 </html>
