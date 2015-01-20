@@ -1,15 +1,62 @@
 <html>
 <head>
     <title> Menu </title>
+    <style>
+        #drop-file {
+            width: 100%;
+            height: 100%;
+            background: #89d4ff;
+        }
+    </style>
 </head>
 <body>
+<div id="drop-file">
 
+</div>
 <script>
-    // Load native UI library.
-//    var gui = require('nw.gui');
     var rf = require('./RenameFile.js');
+    var dropFileEL = document.getElementById('drop-file');
 
-    rf.lowerCase("rename file");
+    document.addEventListener("dragenter", function(e){
+        dropFileEL.style.borderColor = 'gray';
+    }, false);
+    document.addEventListener("dragleave", function(e){
+        dropFileEL.style.borderColor = 'silver';
+    }, false);
+    dropFileEL.addEventListener("dragenter", function(e){
+        dropFileEL.style.borderColor = 'gray';
+        dropFileEL.style.backgroundColor = 'white';
+    }, false);
+    dropFileEL.addEventListener("dragleave", function(e){
+        dropFileEL.style.backgroundColor = 'transparent';
+    }, false);
+    dropFileEL.addEventListener("dragenter", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+    }, false);
+    dropFileEL.addEventListener("dragover", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+    }, false);
+
+    dropFileEL.addEventListener("drop", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+
+        handleFiles(e.dataTransfer.files);
+    }, false);
+
+    handleFiles = function(files) {
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            console.log(file);
+
+            rf.lowerCase(file.path);
+        }
+    }
+
+    // Load native UI library.
+    // var gui = require('nw.gui');
 
     // Open URL with default browser.
 //    gui.Shell.openExternal('https://github.com/rogerwang/node-webkit');
