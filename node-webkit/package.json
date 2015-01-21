@@ -1,8 +1,8 @@
 {
-  "name": "Rename File",
+  "name": "JPG大写后缀转小写",
   "main": "index.html",
   "window": {
-    "toolbar": true,
+    "toolbar": false,
     "width": 400,
     "height": 400
   }
