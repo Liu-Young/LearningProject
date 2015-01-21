@@ -1,34 +1,46 @@
 <html>
 <head>
+    <meta charset="utf-8">
     <title> Menu </title>
     <style>
+        body{
+            font-family: 微软雅黑, sans-serif;
+        }
         #drop-file {
-            width: 100%;
-            height: 100%;
-            background: #89d4ff;
+            display: table;
+            box-sizing: border-box;
+            width: 98%;
+            height: 98%;
+            border: 5px solid #bebebe;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            margin: 1%;
+            text-align: center;
+            background: #e8e8e8;
+        }
+        #drop-file .tip{
+            /*background: #afecff;*/
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 24px;
+            color: #9b9b9b;
         }
     </style>
 </head>
 <body>
 <div id="drop-file">
-
+    <span class="tip">把文件拖进方框内</span>
 </div>
 <script>
     var rf = require('./RenameFile.js');
     var dropFileEL = document.getElementById('drop-file');
 
-    document.addEventListener("dragenter", function(e){
-        dropFileEL.style.borderColor = 'gray';
-    }, false);
-    document.addEventListener("dragleave", function(e){
-        dropFileEL.style.borderColor = 'silver';
-    }, false);
     dropFileEL.addEventListener("dragenter", function(e){
-        dropFileEL.style.borderColor = 'gray';
-        dropFileEL.style.backgroundColor = 'white';
+        dropFileEL.style.backgroundColor = '#CDCDCD';
     }, false);
     dropFileEL.addEventListener("dragleave", function(e){
-        dropFileEL.style.backgroundColor = 'transparent';
+        dropFileEL.style.backgroundColor = '#e8e8e8';
     }, false);
     dropFileEL.addEventListener("dragenter", function(e){
         e.stopPropagation();
@@ -49,7 +61,6 @@
     handleFiles = function(files) {
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
-            console.log(file);
 
             rf.lowerCase(file.path);
         }
