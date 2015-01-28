@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reca International</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="top">
+    <div class="container">
+        <ul class="language">
+            <li class="current"><a href="#">EN</a></li>
+            <li><a href="#">CN</a></li>
+            <li><a href="#">RU</a></li>
+        </ul>
+        <div class="hotline">Hotline Counseling: 020-2241115</div>
+    </div>
+</div>
+<div id="nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="logo" src="images/RECA.png">
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navigation">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Company</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Service<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="article-bonded.html">Bonded Warehousing</a></li>
+                        <li><a href="article-info.html">Professional Assistants</a></li>
+                        <li><a href="article-logistics.html">Logistics and Customs Clearance</a></li>
+                        <li><a href="article-trade.html">Trade</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <ul class="list">
+                    <li><a href="article-trade.html">Trade</a></li>
+                    <li><a href="article-logistics.html">Logistics and Customs Clearance</a></li>
+                    <li><a href="article-info.html">Professional Assistants</a></li>
+                    <li><a href="article-bonded.html">Bonded Warehousing</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <h2>Trade</h2>
+
+                <p>Reca has extensive commodities information network, its cooperation partners around China and all
+                    over the world. Besides providing customers dependable commodities, Reca also proffer services in
+                    technical consultation and after-sales, and they are ready to provide customers technical support
+                    for products applications and new products development.</p>
+
+                <p>Reca owns a business team, who is professional at international trading. They can provide different
+                    plans of logistics for customers, in a mean while, they can also assist customers for developing
+                    market in China, sourcing producing manufacturers, inspecting and collecting goods, booking vessel
+                    space and containers, managing customs clearance, providing trading consultation and third-country
+                    transportation, arranging payment for goods between customers and suppliers, in order to let
+                    customers get specialized and personalized services.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <p>Copyright © 1998 - 2008 Reca International Inc. All Rights Reserved</p>
+</div>
+<script src="javascript/jquery-1.11.2.min.js"></script>
+<script>
+    $(function () {
+        // JS计算设置#articles最小高度
+        $("#articles").css({
+            minHeight: $(document).height() - 210
+        })
+    });
+</script>
+</body>
+</html>
