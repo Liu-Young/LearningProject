@@ -1,0 +1,87 @@
+.block {
+  padding: 30px 0; }
+  @media (min-width: 768px) {
+    .block {
+      padding: 60px 0; } }
+
+.title {
+  padding: 0 0 20px 0;
+  font-size: 36px; }
+
+#nav .navigation a {
+  padding: 5px 10px; }
+#nav .navigation .dropdown-menu {
+  margin-left: 10px; }
+@media (min-width: 768px) {
+  #nav .navigation a {
+    margin: 0 10px; } }
+
+#banner h3 {
+  margin: 0 0 30px 0;
+  font-size: 40px; }
+  @media (min-width: 768px) {
+    #banner h3 {
+      margin: 0 0 40px 0;
+      font-size: 54px; } }
+#banner h4 {
+  font-size: 30px; }
+  @media (min-width: 768px) {
+    #banner h4 {
+      font-size: 36px; } }
+#banner .down-arrow {
+  margin: 40px auto 0; }
+  @media (min-width: 768px) {
+    #banner .down-arrow {
+      margin: 80px auto 0; } }
+
+#broker .desc {
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    #broker .desc {
+      margin-bottom: 50px; } }
+#broker img {
+  margin-right: 15px; }
+@media (min-width: 768px) {
+  #broker p {
+    font-size: 14px; }
+  #broker .sub-title {
+    font-size: 16px; } }
+@media (min-width: 992px) {
+  #broker p {
+    font-size: 16px; }
+  #broker .sub-title {
+    font-size: 20px; } }
+
+@media (min-width: 768px) {
+  #store .gallery img {
+    padding: 2px; } }
+@media (min-width: 992px) {
+  #store .gallery img {
+    padding: 5px; } }
+#store p {
+  font-size: 16px; }
+
+#company {
+  font-size: 16px; }
+
+#contact-us .sub-title {
+  margin-bottom: 20px; }
+#contact-us input[type=text] {
+  padding: 6px 10px;
+  margin-bottom: 20px; }
+#contact-us textarea {
+  margin-bottom: 20px;
+  padding: 10px; }
+#contact-us .btn {
+  padding: 10px 20px;
+  margin-bottom: 20px; }
+#contact-us .more-info {
+  font-size: 16px; }
+
+#footer {
+  padding: 10px; }
+
+#articles {
+  padding: 20px 0; }
+  #articles .list a {
+    padding: 5px 0; }
