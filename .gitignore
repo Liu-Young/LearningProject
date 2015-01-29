@@ -1,6 +1,7 @@
 .idea/
 .sass-cache
 *.iml
-**/node_modules
+node_modules
+bower_components
 npm-debug.log
 reca/Reca-Index.psd
