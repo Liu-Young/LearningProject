@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <%- include common/meta.ejs %>
+    <title></title>
+    <%- include common/head-link-script.ejs %>
+</head>
+<body>
+    <%- include common/header.ejs %>
+    <div id="banner" class="block">
+        <div class="container">
+            <h3>What can we do for you?</h3>
+            <h4>You can buy what you wanted</h4>
+            <h4>Receive what you ordered</h4>
+            <a class="down-arrow" href="#"></a>
+        </div>
+    </div>
+    <div id="broker" class="block">
+        <div class="container">
+            <h3 class="title">Shopping Broker Service</h3>
+            <p class="desc">Through Reca Shopping Broker Service: you can buy any products in China. You will enjoy our service, because: you would spend <span class="highlight">less money</span>, you would get <span class="highlight">more convenience</span> and you would find we are <span class="highlight">a reliable broker</span>.</p>
+            <div class="row">
+                <div class="feature col-md-4 col-sm-4">
+                   <img src="../images/browser.png">
+                   <p class="sub-title">Any Products</p>
+                    <p>Full range of products. You can buy any products in China, much cheaper and easier online or offline.</p>
+                </div>
+                <div class="feature col-md-4 col-sm-4">
+                   <img src="../images/commuication.png">
+                   <p class="sub-title">Communication Without Barriers</p>
+                    <p>Professional shopping assistants. We have professional Russian or English-speaking shopping assistants to solve your any problems during the process of shopping.</p>
+                </div>
+                <div class="feature col-md-4 col-sm-4">
+                   <img src="../images/HQ.png">
+                   <p class="sub-title">High Quality</p>
+                    <p>Reliable quality of the commodities. Our professional assistants will control the quality of the purchased commodities strictly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="store" class="block">
+        <div class="container">
+           <h3 class="title">William’s Dom Household Store</h3>
+            <div class="gallery">
+                <img src="../images/household-1.png">
+                <img src="../images/household-2.png">
+                <img src="../images/household-3.png">
+                <img src="../images/household-4.png">
+                <img src="../images/household-5.png">
+                <img src="../images/household-6.png">
+            </div>
+            <p>There are a lot of beautiful furnitures in the <a class="link" href="#">William’s Dom</a> as beautiful as shown above</p>
+        </div>
+    </div>
+    <div id="company" class="block">
+        <div class="container">
+            <h3 class="title">Company</h3>
+            <p>Reca International Company Limited (hereinafter referred to as Reca) is a multi-functioned company, which is located in Guangzhou and began its business in 2001. Reca is an international trade & logistics company whose business and services cover ordering assistance, trade, customs clearance, bonded warehousing and logistics. During the past 10 years, Reca has served numerous customers from different countries. Reca's years of efforts and practices have brought Reca rich experiences, making it a professional foreign-trade company with a complete operating system.</p>
+        </div>
+    </div>
+    <div id="contact-us" class="block">
+        <div class="container">
+            <h3 class="title">Contact Us</h3>
+            <div class="row">
+                <div class="mail col-md-9 col-sm-12">
+                    <div class="sub-title">MAIL</div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12"><input type="text" placeholder="Name"></div>
+                        <div class="col-md-6 col-sm-12"><input type="text" placeholder="Mail"></div>
+                    </div>
+                    <textarea rows="8"></textarea>
+                    <a href="#" class="btn">Submit mail</a>
+                </div>
+                <div class="more-info col-md-3 col-sm-12">
+                    <div class="sub-title">MORE INFO</div>
+                    <p>0086-130 7884 6488<br/>
+                       0086-20-8358 4334<br/>
+                    <p>reca@reca-mail.cn</p>
+                    <p>Room 601, Block A, <br/>
+                    Lingnan Building, 5 Luhu Lu Guangzhou, P.R.China
+                    510095</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map">
+        <img src="../images/map.png">
+    </div>
+    <%- include common/footer.ejs %>
+    <script src="javascripts/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function () {
+            $(".navbar-toggle").click(function(){
+                $("#nav .navigation").toggleClass("show");
+            });
+        });
+    </script>
+</body>
 </html>

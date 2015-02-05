@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include common/meta.ejs %>
+    <title></title>
+    <%- include common/head-link-script.ejs %>
+</head>
+<body>
+<%- include common/header.ejs %>
+<div id="articles">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <ul class="list">
+                    <li><a href="article-trade.html">Trade</a></li>
+                    <li><a href="article-logistics.html">Logistics and Customs Clearance</a></li>
+                    <li><a href="article-info.html">Professional Assistants</a></li>
+                    <li><a href="article-bonded.html">Bonded Warehousing</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <h2>Bonded Warehousing</h2>
+
+                <p>Reca develop bonded warehousing since 2008. They own a 5000m2 warehouse. They are one of the largest
+                    enterprises
+                    in bonded warehousing. Reca have advanced WMS management system, and have a professional team, which
+                    always
+                    commit to the development of logistics and trade. The more than 500 staffs team, providing customers
+                    services
+                    with bonded warehousing, international freight forwarders, inspection consultation, products
+                    information
+                    consultation, wholesale and retail trade, goods imported and exported, technology imported and
+                    exported, simple
+                    processing and other services.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<%- include common/footer.ejs %>
+<script src="javascript/jquery-1.11.2.min.js"></script>
+<script>
+    $(function () {
+        // JS计算设置#articles最小高度
+        $("#articles").css({
+            minHeight: $(document).height() - 210
+        })
+    });
+</script>
+</body>
+</html>
