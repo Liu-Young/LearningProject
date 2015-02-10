@@ -357,6 +357,14 @@ ul, li{
 #map{
     overflow: hidden;
     text-align: center;
+    position: relative;
+    height: 450px;
+    >img{
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      margin-left: -1579px;
+    }
 }
 #footer{
     text-align: center;
