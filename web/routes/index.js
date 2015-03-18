@@ -18,4 +18,8 @@ router.get('/article-trade.html', function(req, res, next) {
   res.render('article-trade');
 });
 
+router.post('/sendMessage', function (req, res, next) {
+    res.send('Hello~~');
+});
+
 module.exports = router;
